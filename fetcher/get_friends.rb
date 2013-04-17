@@ -11,7 +11,6 @@ Twitter.configure do |config|
 end
 
 def output_friends_data(screen_name)
-  java.lang.Thread.sleep SLEEP_TIME
   Twitter.friends(screen_name).each_slice(100) do |users|
     users.each do |user|
       puts "#{screen_name} #{user.screen_name}"

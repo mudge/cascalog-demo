@@ -35,7 +35,7 @@
 
 (defn *isValidTarget
   [this paths]
-  (and (> (count paths) 1)))
+  (= "data" (first paths)))
 
 ;; helpers
 
@@ -43,3 +43,9 @@
   "Creates a json pail at root"
   [root]
   (Pail/create root (PailSpec. "SequenceFile" {} (model.JsonPailStructure.))))
+
+(defn get-or-create-json-pail
+  [root]
+  (try (Pail. root)
+    (catch Exception e
+      (create-json-pail root))))

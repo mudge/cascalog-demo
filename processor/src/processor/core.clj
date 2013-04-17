@@ -1,6 +1,9 @@
-(ns processor.core)
+(ns processor.core
+  (:use [cascalog.api])
+  (:require [cascalog.ops :as c]
+            [processor.source :as s])
+  (:import [backtype.hadoop.pail Pail]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+;; s/users   [?user]
+;; s/follows [?user1 ?user2]
+;; s/tweets  [?user ?text]

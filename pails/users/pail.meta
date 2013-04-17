@@ -1,0 +1,4 @@
+--- 
+format: SequenceFile
+structure: model.JsonPailStructure
+args: {}

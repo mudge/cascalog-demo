@@ -5,7 +5,7 @@
              [cheshire.core :as json]
              [cascalog.ops :as c]))
 
-(def pail-root "/Users/ben/github/benmiles/cascalog-demo/pails")
+(def pail-root (-> (java.io.File. "../pails") .getAbsolutePath))
 
 (defn users
   "A cascalog source for [?user]"

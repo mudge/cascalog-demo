@@ -1,5 +1,5 @@
 require 'java'
-require_relative "../model/target/model-1.0.0-standalone.jar"
+require_relative "../model/target/model-0.0.1-SNAPSHOT-standalone.jar"
 require 'nokogiri'
 require 'typhoeus'
 require 'uri'

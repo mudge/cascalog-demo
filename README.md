@@ -18,6 +18,7 @@ First, compile and install the `model` JAR like so:
 
 ```console
 $ cd model
+$ lein uberjar
 $ lein install
 ```
 
